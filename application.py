@@ -15,7 +15,7 @@ def hello():
 
 @app.route("/ping",methods =[ 'GET'])
 def ping():
-	return "hello its working"
+	return "check function"
 
 
 
