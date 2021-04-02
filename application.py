@@ -9,9 +9,16 @@ def hello():
 		user_id = request.form['id']
 		return f"hello--{user_id}"
 	else:
-		clf = RandomForestClassifier(n_estimators = 100)
 
-		return f"Hello World!{clf}"
+		clf = RandomForestClassifier(random_state=0)
+		X = [[ 1,  2,  3],  # 2 samples, 3 features
+		     [11, 12, 13]]
+		y = [0, 1]  # classes of each sample
+		clf.fit(X, y)
+		res=clf.predict(X)
+		d={}
+		d["res"]=res.tolist()s
+		return d
 
 @app.route("/ping",methods =[ 'GET'])
 def ping():
