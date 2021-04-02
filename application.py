@@ -13,6 +13,10 @@ def hello():
 
 		return f"Hello World!{clf}"
 
+@app.route("/ping",methods =[ 'GET'])
+def hello():
+
+	return 200,"Ok"
 
 
 if __name__ == "__main__":
